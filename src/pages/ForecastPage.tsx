@@ -24,7 +24,7 @@ function ForecastPage() {
     setLoading(true)
 
     try {
-      const data = await getHourlyForecast()
+      const data = await getHourlyForecast(loc)
       setHourly(data)
     } catch {
       // Error handling placeholder

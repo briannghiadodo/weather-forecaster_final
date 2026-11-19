@@ -1,6 +1,6 @@
 # Weather Forecaster
 
-A React web application for weather forecasting with storm tracking, alerts, and location management.
+A React web application for live weather conditions, hourly forecasting, storm tracking, configurable alerts, saved locations, activity guidance, and climate-data export.
 
 ## Tech Stack
 
@@ -80,11 +80,24 @@ src/
 | `/storm` | Storm/radar tracking | UC4 |
 | `/alerts` | Set weather alert thresholds | UC3, UC6 |
 | `/profile` | Manage saved locations | UC3 |
+| `/dashboard` | Current conditions and risk summary | UC1, UC2, UC4 |
+| `/assistant` | Natural-language activity guidance | UC5 |
+| `/data` | Climate history and CSV export | UC7 |
 
 ## Design
 
-The app uses a dark theme with CSS custom properties defined in `index.css`. All colors, spacing, and breakpoints are centralized in `:root` for easy theming.
+The app uses a presentation-friendly light theme with CSS custom properties defined in `index.css`. Colors, spacing, and breakpoints are centralized in `:root` for easy theming.
 
-## Mock Data
+## Weather Data
 
-The `services/weatherService.ts` file contains mock data with simulated network delays. Replace these functions with real API calls when integrating a weather provider.
+The app uses the public Open-Meteo forecast and geocoding APIs without requiring an API key. A deterministic offline fallback keeps the demonstration usable if the network or provider is unavailable. Storm reports are representative demo data and are clearly separated from the live forecast service.
+
+## Final Demo Features
+
+- Live current conditions with humidity, wind, precipitation, feels-like temperature, UV index, and sunset
+- ZIP/city search and a 24-hour timeline
+- Nearby hazard cards with distance and severity
+- Custom weather thresholds and alert toggles
+- Profile and saved-location management
+- Natural-language recommendations for outdoor activities
+- Seven-day climate table and client-side CSV export

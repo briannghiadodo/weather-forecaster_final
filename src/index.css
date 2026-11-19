@@ -14,10 +14,10 @@
   --text-primary: #1a1a2e;
   --text-secondary: #6b7280;
   --text-tertiary: #9ca3af;
-  --accent: #6c63ff;
-  --accent-hover: #5b52ee;
-  --accent-glow: rgba(108, 99, 255, 0.12);
-  --accent-border: rgba(108, 99, 255, 0.2);
+  --accent: #126b72;
+  --accent-hover: #0d555b;
+  --accent-glow: rgba(18, 107, 114, 0.14);
+  --accent-border: rgba(18, 107, 114, 0.22);
   --danger: #ef4444;
   --danger-glow: rgba(239, 68, 68, 0.1);
   --warning: #f59e0b;
@@ -44,6 +44,8 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+
+button, input, select { font: inherit; }
 
 .app {
   display: flex;
@@ -124,7 +126,8 @@ body {
   flex: 1;
   padding: 2.5rem 3rem;
   min-height: 100vh;
-  max-width: 1100px;
+  max-width: 1320px;
+  width: calc(100% - var(--sidebar-width));
 }
 
 /* Page header */
@@ -224,7 +227,7 @@ body {
 }
 
 .btn-primary {
-  background: linear-gradient(135deg, var(--accent), #8b7aff);
+  background: linear-gradient(135deg, var(--accent), #2498a2);
   color: white;
   box-shadow: 0 2px 10px var(--accent-glow);
 }

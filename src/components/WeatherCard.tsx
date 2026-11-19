@@ -60,10 +60,22 @@ function WeatherCard({ weather }: WeatherCardProps) {
           <div className="metric-value">{Math.round(weather.precipitationChance)}%</div>
           <div className="metric-label">Precipitation</div>
         </div>
+        <div className="metric">
+          <div className="metric-value">{Math.round(weather.feelsLike ?? weather.temperatureHigh)}°</div>
+          <div className="metric-label">Feels like</div>
+        </div>
+        <div className="metric">
+          <div className="metric-value">{weather.uvIndex?.toFixed(1) ?? '—'}</div>
+          <div className="metric-label">UV index</div>
+        </div>
+        <div className="metric">
+          <div className="metric-value">{weather.sunset?.toLocaleTimeString([], { hour: 'numeric', minute: '2-digit' }) ?? '—'}</div>
+          <div className="metric-label">Sunset</div>
+        </div>
       </div>
 
       <div className="weather-footer">
-        <span>Last updated: {weather.timestamp?.toLocaleTimeString()}</span>
+        <span>{weather.source === 'live' ? 'Live Open-Meteo data' : 'Reliable demo fallback'} · Updated {weather.timestamp?.toLocaleTimeString()}</span>
       </div>
     </div>
   )

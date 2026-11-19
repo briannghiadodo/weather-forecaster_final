@@ -43,11 +43,15 @@
 
 .weather-details {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(6, 1fr);
   gap: 0.75rem;
   padding-top: 1.5rem;
   border-top: 1px solid var(--border);
 }
+
+.metric { min-width: 0; }
+.metric-value { font-weight: 750; color: var(--text-primary); }
+.metric-label { font-size: .72rem; color: var(--text-secondary); }
 
 .weather-footer {
   margin-top: 1.25rem;

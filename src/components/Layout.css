@@ -19,12 +19,25 @@
 .sidebar-header h1 {
   font-size: 1.35rem;
   font-weight: 800;
-  background: linear-gradient(135deg, #6c63ff, #a78bfa);
+  background: linear-gradient(135deg, #126b72, #39a7a4);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
   letter-spacing: -0.02em;
 }
+
+.sidebar-status {
+  margin: 0 1rem 1.25rem;
+  padding: .8rem;
+  border-radius: .75rem;
+  background: #eef9f7;
+  color: #3e6768;
+  font-size: .7rem;
+  font-weight: 700;
+  line-height: 1.35;
+}
+
+.sidebar-status span { display: inline-block; width: 7px; height: 7px; border-radius: 50%; background: #1caa78; margin-right: .35rem; }
 
 .nav-list {
   list-style: none;

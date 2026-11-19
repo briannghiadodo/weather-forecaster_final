@@ -18,6 +18,12 @@ export interface WeatherForecast {
   humidity: number
   windSpeed: number
   precipitationChance: number
+  feelsLike?: number
+  uvIndex?: number
+  visibility?: number
+  sunrise?: Date
+  sunset?: Date
+  source?: 'live' | 'demo'
   timestamp?: Date
 }
 
